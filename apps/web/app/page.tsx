@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { defaultAiFoundation } from "@kids-edu/ai";
 import { siteConfig } from "@kids-edu/config";
 
@@ -30,6 +31,22 @@ export default function HomePage() {
               <li>pnpm workspaces</li>
               <li>Provider-agnostic AI contract</li>
             </ul>
+
+            <div className="mt-6 rounded-[1.5rem] bg-emerald-950 p-5 text-white">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-100/80">
+                First learning loop
+              </p>
+              <h2 className="mt-3 font-display text-3xl">ことばカード</h2>
+              <p className="mt-3 text-sm leading-7 text-emerald-50/80">
+                Picture-first Japanese vocabulary cards with tap and keyboard support.
+              </p>
+              <Link
+                className="mt-4 inline-flex items-center rounded-full bg-[#fff8e8] px-5 py-3 text-sm font-semibold text-emerald-950 transition-colors duration-200 hover:bg-white"
+                href="/kotoba-cards"
+              >
+                Open sample deck
+              </Link>
+            </div>
           </aside>
         </header>
 
@@ -91,4 +108,3 @@ export default function HomePage() {
     </main>
   );
 }
-
