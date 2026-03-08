@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model LearnerProfile {
+  id           String        @id @default(cuid())
+  firstName    String
+  ageYears     Int?
+  interests    String[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  sessionPlans SessionPlan[]
+}
+
+model SessionPlan {
+  id          String        @id @default(cuid())
+  learnerId   String
+  title       String
+  objective   String
+  status      SessionStatus @default(DRAFT)
+  scheduledAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  learner     LearnerProfile @relation(fields: [learnerId], references: [id], onDelete: Cascade)
+}
+
+enum SessionStatus {
+  DRAFT
+  READY
+  ARCHIVED
+}
+

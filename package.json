@@ -1,0 +1,24 @@
+{
+  "name": "kids-edu",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.28.1",
+  "engines": {
+    "node": ">=22.19 <23"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @kids-edu/web dev",
+    "build": "pnpm -r --if-present run build",
+    "lint": "pnpm -r --if-present run lint",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f db",
+    "db:generate": "pnpm --filter @kids-edu/db db:generate",
+    "db:migrate:dev": "sh ./scripts/db-migrate-dev.sh"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.15",
+    "typescript": "5.9.3"
+  }
+}
