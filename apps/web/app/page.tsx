@@ -32,20 +32,38 @@ export default function HomePage() {
               <li>Provider-agnostic AI contract</li>
             </ul>
 
-            <div className="mt-6 rounded-[1.5rem] bg-emerald-950 p-5 text-white">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-100/80">
-                First learning loop
-              </p>
-              <h2 className="mt-3 font-display text-3xl">ことばカード</h2>
-              <p className="mt-3 text-sm leading-7 text-emerald-50/80">
-                Picture-first Japanese vocabulary cards with tap and keyboard support.
-              </p>
-              <Link
-                className="mt-4 inline-flex items-center rounded-full bg-[#fff8e8] px-5 py-3 text-sm font-semibold text-emerald-950 transition-colors duration-200 hover:bg-white"
-                href="/kotoba-cards"
-              >
-                Open sample deck
-              </Link>
+            <div className="mt-6 grid gap-4">
+              <div className="rounded-[1.5rem] bg-emerald-950 p-5 text-white">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-100/80">
+                  First learning loop
+                </p>
+                <h2 className="mt-3 font-display text-3xl">ことばカード</h2>
+                <p className="mt-3 text-sm leading-7 text-emerald-50/80">
+                  Picture-first Japanese vocabulary cards with tap and keyboard support.
+                </p>
+                <Link
+                  className="mt-4 inline-flex items-center rounded-full bg-[#fff8e8] px-5 py-3 text-sm font-semibold text-emerald-950 transition-colors duration-200 hover:bg-white"
+                  href="/kotoba-cards"
+                >
+                  Open sample deck
+                </Link>
+              </div>
+
+              <div className="rounded-[1.5rem] border border-orange-200 bg-[#fff4e8] p-5 text-slate-900">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-700">
+                  New recognition game
+                </p>
+                <h2 className="mt-3 font-display text-3xl">なかまわけゲーム</h2>
+                <p className="mt-3 text-sm leading-7 text-slate-700">
+                  One prompt, three big choices, and immediate gentle feedback for preschool learners.
+                </p>
+                <Link
+                  className="mt-4 inline-flex items-center rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-800"
+                  href="/nakamawake-game"
+                >
+                  Open classification game
+                </Link>
+              </div>
             </div>
           </aside>
         </header>
